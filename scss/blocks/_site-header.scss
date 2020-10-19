@@ -1,0 +1,74 @@
+.site-header {
+  background-color: $simple-bgc;
+  padding: {
+    top: 20px;
+    bottom: 20px;
+  }
+}
+
+.site-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header__logo-description-wrapper, .site-header__working-time-hotlines-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 450px;
+}
+
+.site-header__logo-link {
+  margin-right: 26px;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.site-header__logo-img {
+  display: block;
+  width: 142px;
+  height: 42px;
+  object-fit: cover;
+}
+
+.site-header__irvas-description {
+  width: 220px;
+  color: $unusual-words;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 16px;
+  text-decoration: none;
+  @include p-m-control;
+}
+
+.site-header__call-measurer-link {
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  border: 2px solid $offer;
+  border-radius: 10px;
+  padding: {
+    top: 17px;
+    bottom: 14px;
+    left: 15px;
+    right: 20px;
+  }
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 16.8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $offer;
+}
