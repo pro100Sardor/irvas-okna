@@ -19,24 +19,20 @@
   max-width: 450px;
 }
 
+.site-header__logo-description-wrapper {
+  width: 100%;
+}
+
 .site-header__logo-link {
   margin-right: 26px;
-  transition: opacity 0.2s ease;
-
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
+  @include simple-hover;
 }
 
 .site-header__logo-img {
   display: block;
   width: 142px;
   height: 42px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .site-header__irvas-description {
@@ -52,16 +48,20 @@
 }
 
 .site-header__call-measurer-link {
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
   width: 170px;
+  margin: {
+    right: 15px;
+    left: 15px;
+  }
   border: 2px solid $offer;
   border-radius: 10px;
   padding: {
     top: 17px;
     bottom: 14px;
     left: 15px;
-    right: 20px;
+    right: 16px;
   }
   font-size: 14px;
   font-weight: 700;
@@ -71,4 +71,153 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $offer;
+  @include simple-hover;
+
+  &::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    background-image: url("../img/measuring.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+    @include bg-retina {
+      background-image: url("../img/measuring@2x.png");
+    }
+  }
+}
+
+.site-header__working-time-hotlines-wrapper {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.site-header__working-time-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+
+  &::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    background-image: url("../img/clock.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+
+    @include bg-retina {
+      background-image: url("../img/clock@2x.png");
+    }
+  }
+}
+
+.site-header__working-time {
+  @include p-m-control;
+  color: $simple-text-color;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+}
+
+.site-header__working-hourse {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.site-header__hotlines-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+.site-header__hotlines {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  color: $simple-text-color;
+  font-size: 23px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-decoration: none;
+  @include simple-hover;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    background-image: url("../img/phone.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+
+    @include bg-retina {
+      background-image: url("../img/phone@2x.png");
+    }
+  }
+}
+
+.site-header__request-call-back-link {
+  color: $unusual-words;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  padding-left: 35px;
+  @include simple-hover;
+}
+
+@include breakpoint-down (1040px) {
+  .site-header__logo-link {
+    margin-right: 15px;
+  }
+
+  .site-header__logo-img {
+    width: 125px;
+    height: 35px;
+  }
+
+  .site-header__working-time-wrapper {
+    &::before {
+      margin-right: 10px;
+    }
+  }
+
+  .site-header__hotlines {
+    font-size: 18px;
+
+    &::before {
+      margin-right: 10px;
+    }
+  }
+
+  .site-header__request-call-back-link {
+    display: none;
+  }
+}
+
+@include breakpoint-down (960px) {
+  // .site-header__working-time-hotlines-wrapper {
+  //   justify-content: flex-end;
+  // }
+
+  .site-header__working-time-wrapper {
+    order: 1;
+   }
+
+
+  .site-header__hotlines {
+    display: none;
+  }
 }

@@ -71,3 +71,19 @@ margin: {
 }
 
 // media to adapt the background image to retinal screens ended
+
+// simple hover effect started
+
+@mixin simple-hover {
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+// simple hover effect ended
