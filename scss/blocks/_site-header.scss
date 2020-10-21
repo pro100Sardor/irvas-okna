@@ -208,16 +208,50 @@
 }
 
 @include breakpoint-down (960px) {
-  // .site-header__working-time-hotlines-wrapper {
-  //   justify-content: flex-end;
-  // }
+  .site-header__logo-description-wrapper {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .site-header__logo-img {
+    margin-bottom: 5px;
+  }
 
   .site-header__working-time-wrapper {
     order: 1;
-   }
-
+  }
 
   .site-header__hotlines {
     display: none;
+  }
+}
+
+@include breakpoint-down (610px) {
+  .site-header__logo-description-wrapper {
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+
+  .site-header__logo-img {
+    margin-bottom: 10px;
+  }
+
+  .site-header__call-measurer-link {
+    display: none;
+  }
+
+  .site-header__working-time-hotlines-wrapper {
+    display: none;
+  }
+}
+
+@include breakpoint-down (400px) {
+  .site-header__logo-description-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
   }
 }
