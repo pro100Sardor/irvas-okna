@@ -15,3 +15,29 @@
     bottom: 98px;
   }
 }
+
+.intro-section__benefits-wrapper {
+  margin-right: 50px;
+  max-width: 500px;
+}
+
+.intro-section__price-benefit {
+  @include p-m-control(0, 145px);
+  color: $simple-text;
+  font-size: 26px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 48px;
+}
+
+.intro-section__price-benefit--price-value {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 30px;
+  font-size: 55px;
+}
+
+.intro-section__benefits-list {
+  @include reset-list;
+}

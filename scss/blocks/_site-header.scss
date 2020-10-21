@@ -118,7 +118,7 @@
 
 .site-header__working-time {
   @include p-m-control;
-  color: $simple-text-color;
+  color: $simple-text;
   font-size: 14px;
   font-weight: 400;
   font-style: normal;
@@ -142,7 +142,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 5px;
-  color: $simple-text-color;
+  color: $simple-text;
   font-size: 23px;
   font-weight: 700;
   font-style: normal;
