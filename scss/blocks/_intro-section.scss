@@ -1,0 +1,17 @@
+.intro-section {
+  margin-bottom: 79px;
+  background-image: url("../img/intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1920px 640px;
+}
+
+.intro-section__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: {
+    top: 100px;
+    bottom: 98px;
+  }
+}
